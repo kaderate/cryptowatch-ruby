@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Wednesday, November 1st 2017, 8:02:52 pm
+# @Last modified time: Wednesday, November 1st 2017, 11:40:24 pm
 
 require 'rubygems'
 require 'rest-client'

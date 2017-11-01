@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Wednesday, November 1st 2017, 1:51:07 pm
+# @Last modified time: Wednesday, November 1st 2017, 10:35:55 pm
 require 'rest-client'
 require 'logger'
 require 'json'
@@ -19,7 +19,13 @@ module Cryptowatch
       @logger  = Logger.new(STDOUT)
     end
 
-    def get (url)
+    def get (*elements)
+      if (elements.size == 0)
+        logger.error("Can not execute a 'GET' request without url.")
+        return nil
+      end
+      url = Api::format_url(*elements)
+      puts url
       begin
         answer = JSON.parse(RestClient::Request.execute(
           method: :get,
@@ -32,8 +38,10 @@ module Cryptowatch
           logger.error("(#{url}): #{answer.error}")
         end
         return answer
-      rescue SocketError, RestClient::ExceptionWithResponse => e
+      rescue SocketError => e
         logger.error("(#{url}): #{e.message}")
+      rescue RestClient::ExceptionWithResponse => e
+        logger.error("(OTHER#{url}): #{e.message}")
       end
     end
   end
