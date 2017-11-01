@@ -3,11 +3,11 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Wednesday, November 1st 2017, 1:14:08 am
+# @Last modified time: Wednesday, November 1st 2017, 8:11:43 pm
 
 module Cryptowatch
   module Api
-    VERSION = [0, 0, 1]
+    VERSION = [0, 0, 0, 1]
     VERSION_FORMAT = VERSION.join('.')
   end
 end
