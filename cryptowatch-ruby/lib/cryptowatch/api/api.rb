@@ -3,8 +3,8 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Wednesday, November 1st 2017, 1:46:55 am
-require 'rest-client'
+# @Last modified time: Wednesday, November 1st 2017, 8:05:32 pm
+require 'cryptowatch/adapter/rest_client_adapter'
 
 module Cryptowatch
   module Api
@@ -15,8 +15,8 @@ module Cryptowatch
     API_EXCHANGES_URL = "#{API_BASE_URL}/exchanges"
     API_MARKETS_URL   = "#{API_BASE_URL}/markets"
 
-    def revision
-      puts "ccccccccccc"
+    def self.format_url(*args)
+      return (args.size > 1 && !args[1].empty?) ? (args.join '/') : (args.join'')
     end
   end
 end

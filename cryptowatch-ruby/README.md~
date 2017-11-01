@@ -1,0 +1,22 @@
+# Cryptowatch Library for Ruby
+
+Developpement of *a simple interface in Ruby for Cryptowatch.*
+
+Cryptowat.ch API: https://cryptowat.ch/docs/
+
+## Get started
+
+Install it yourself as:
+```
+gem install 'cryptowatch'
+```
+Require the gem in your project
+## Requests examples
+Let's construct or first request with the gem:
+```ruby
+request = Cryptowatch.new().currencies(:btc, :eth)
+           
+puts request.execute()
+
+# output => 
+```
