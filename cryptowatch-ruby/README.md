@@ -22,5 +22,6 @@ cw = Cryptowatch.new({:timeout => 10}) #By default timeout = 5.
 puts cw.assets #Returns all assets (in no particular order).
 puts cw.assets(:btc) #Lists all markets which have this asset as a base or quote.
 puts cw.price(:kraken, :btcusd) #return currency's price for (MARKET_NAME, PAIR_NAME)
-(in writing)
+
+#In writing...
 ```
