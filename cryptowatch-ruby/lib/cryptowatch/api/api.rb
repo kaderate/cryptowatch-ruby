@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Wednesday, November 1st 2017, 11:32:13 pm
+# @Last modified time: Thursday, November 2nd 2017, 12:25:17 am
 require 'cryptowatch/adapter/rest_client_adapter'
 
 module Cryptowatch

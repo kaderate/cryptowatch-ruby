@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Wednesday, November 1st 2017, 8:11:43 pm
+# @Last modified time: Thursday, November 2nd 2017, 12:14:20 am
 
 module Cryptowatch
   module Api

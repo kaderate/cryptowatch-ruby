@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Wednesday, November 1st 2017, 11:59:48 pm
+# @Last modified time: Thursday, November 2nd 2017, 12:25:20 am
 require 'rest-client'
 require 'logger'
 require 'json'
