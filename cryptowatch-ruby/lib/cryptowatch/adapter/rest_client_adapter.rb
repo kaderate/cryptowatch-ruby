@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Wednesday, November 1st 2017, 10:35:55 pm
+# @Last modified time: Wednesday, November 1st 2017, 11:59:48 pm
 require 'rest-client'
 require 'logger'
 require 'json'
@@ -20,17 +20,18 @@ module Cryptowatch
     end
 
     def get (*elements)
+
       if (elements.size == 0)
         logger.error("Can not execute a 'GET' request without url.")
         return nil
       end
       url = Api::format_url(*elements)
-      puts url
       begin
         answer = JSON.parse(RestClient::Request.execute(
           method: :get,
           url: url,
-          timeout: @options[:timeout])
+          timeout: @options[:timeout]),
+          accept: :json
         )
 
         if answer.has_key? :result
@@ -41,7 +42,7 @@ module Cryptowatch
       rescue SocketError => e
         logger.error("(#{url}): #{e.message}")
       rescue RestClient::ExceptionWithResponse => e
-        logger.error("(OTHER#{url}): #{e.message}")
+        logger.error("(#{url}): Error, bad arguments: #{e.message}")
       end
     end
   end

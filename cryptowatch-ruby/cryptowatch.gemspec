@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Wednesday, November 1st 2017, 1:24:33 am
+# @Last modified time: Wednesday, November 1st 2017, 11:50:47 pm
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
@@ -20,6 +20,5 @@ Gem::Specification.new do |gem|
   gem.homepage		  = 'https://github.com/estebgonza/Cryptowatch'
   gem.require_paths = ['lib']
   gem.licenses      = ['MIT']
-  gem.files         = %w(.document CONTRIBUTING.md LICENSE.md README.md Rakefile octokit.gemspec)
   gem.files         = Dir.glob("lib/**/*.rb")
 end
