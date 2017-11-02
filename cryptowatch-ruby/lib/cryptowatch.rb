@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Thursday, November 2nd 2017, 7:26:25 pm
+# @Last modified time: Thursday, November 2nd 2017, 7:29:34 pm
 
 require "rubygems"
 
@@ -13,4 +13,6 @@ require "cryptowatch/client"
 require "cryptowatch/adapter/rest_client_adapter"
 
 module Cryptowatch
+  module Client
+  end
 end
