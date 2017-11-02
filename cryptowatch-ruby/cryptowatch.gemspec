@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Wednesday, November 1st 2017, 11:50:47 pm
+# @Last modified time: Thursday, November 2nd 2017, 4:13:38 pm
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
@@ -18,7 +18,13 @@ Gem::Specification.new do |gem|
   gem.description	  = 'Simple interface in Ruby to facilite the use Cryptowatch.'
   gem.email         = 'gonzal_e@etna-alternance.net'
   gem.homepage		  = 'https://github.com/estebgonza/Cryptowatch'
-  gem.require_paths = ['lib']
+  gem.require_paths = ['lib/cryptowatch']
   gem.licenses      = ['MIT']
-  gem.files         = Dir.glob("lib/**/*.rb")
+
+  gem.files         = `git ls-files`.split($/)
+  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.test_files    = gem.files.grep(%r{^(test|gem|features)/})
+  gem.require_paths = ["lib"]
+
+  gem.add_development_dependency "rest-client", '~> 0'
 end

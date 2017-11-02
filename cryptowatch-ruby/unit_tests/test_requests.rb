@@ -3,22 +3,35 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Thursday, November 2nd 2017, 12:23:33 am
+# @Last modified time: Thursday, November 2nd 2017, 4:14:04 pm
 
 require 'rubygems'
 require 'rest-client'
-require 'cryptowatch'
-require 'cryptowatch/version'
-require 'cryptowatch/api/api'
+require 'cryptowatch/cryptowatch/cryptowatch_client'
+#require 'cryptowatch/version'
+#require 'cryptowatch/api/api'
 require 'test/unit'
 
 class TestRequests < Test::Unit::TestCase
 
-  attr_accessor :requester
+  attr_accessor :r
 
   def test_requests
-    requester = Cryptowatch::Cryptowatch.new({:timeout => 3})
-    requester.assets
+    r = CWClient.new({:timeout => 3})
+
+    r.assets		                #Returns all assets (in no particular order).
+    r.assets(:btc)              #Lists all markets which have this asset as a base or quote.
+
+    r.pairs		                  #Returns all pairs (in no particular order).
+    r.pairs(:btcusd)	          #Returns a single pair. Lists all markets for this pair.
+
+    r.exchanges		              #Returns a list of all supported exchanges.
+    r.exchanges(:kraken)	      #Returns a single exchange, with associated routes.
+
+    r.markets		                #Returns a list of all supported markets.
+    r.markets(:kraken, :btcusd) #Returns a single market, with associated routes.
+
+    r.price(:kraken, :btcusd)
  end
 
 end

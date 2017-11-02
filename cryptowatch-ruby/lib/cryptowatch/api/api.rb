@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Thursday, November 2nd 2017, 12:25:17 am
+# @Last modified time: Thursday, November 2nd 2017, 9:34:43 am
 require 'cryptowatch/adapter/rest_client_adapter'
 
 module Cryptowatch
@@ -16,7 +16,7 @@ module Cryptowatch
     API_MARKETS_URL   = "#{API_BASE_URL}/markets"
 
     def self.format_url(*args)
-      return (defined? args[1]) ? (args.join '/') : (args.join'')
+      return (args[1] == nil) ? (args.join '') : (args.join'/')
     end
   end
 end
