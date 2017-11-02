@@ -3,9 +3,12 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Thursday, November 2nd 2017, 10:44:13 am
+# @Last modified time: Thursday, November 2nd 2017, 6:46:03 pm
+
+require 'cryptowatch'
+
 module Cryptowatch
-  class CWClient
+  class Client
 
     attr_accessor :rest_adapter
 
@@ -42,7 +45,7 @@ module Cryptowatch
       return @rest_adapter.get(Api::API_MARKETS_URL, market, pair)
     end
 
-    #(market, pair):  Returns
+    #(market, pair):  Returns the pair's price on the associated market.
     def price (market = nil, pair = nil)
       return @rest_adapter.get(Api::API_MARKETS_URL, market, pair, :price)
     end

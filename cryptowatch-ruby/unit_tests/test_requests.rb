@@ -3,21 +3,19 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Thursday, November 2nd 2017, 4:14:04 pm
+# @Last modified time: Thursday, November 2nd 2017, 6:42:40 pm
 
 require 'rubygems'
-require 'rest-client'
-require 'cryptowatch/cryptowatch/cryptowatch_client'
-#require 'cryptowatch/version'
-#require 'cryptowatch/api/api'
 require 'test/unit'
+require 'rest-client'
+require 'cryptowatch'
 
 class TestRequests < Test::Unit::TestCase
 
   attr_accessor :r
 
   def test_requests
-    r = CWClient.new({:timeout => 3})
+    r = Cryptowatch::Client.new({:timeout => 3})
 
     r.assets		                #Returns all assets (in no particular order).
     r.assets(:btc)              #Lists all markets which have this asset as a base or quote.
