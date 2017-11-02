@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Thursday, November 2nd 2017, 7:20:40 pm
+# @Last modified time: Thursday, November 2nd 2017, 7:22:25 pm
 
 require 'rubygems'
 require 'test/unit'
@@ -30,7 +30,6 @@ class TestRequests < Test::Unit::TestCase
     r.markets(:kraken, :btcusd) #Returns a single market, with associated routes.
 
     r.price(:kraken, :btcusd)   #Returns the pair's price on the associated market.
-    
- end
+  end
 
 end
