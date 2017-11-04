@@ -3,16 +3,23 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Thursday, November 2nd 2017, 7:17:33 pm
+# @Last modified time: Saturday, November 4th 2017, 11:45:41 pm
 
 require 'cryptowatch'
 
 module Cryptowatch
-  class Client
+  class Wrapper
 
     attr_accessor :rest_adapter
 
-    def initialize(options = {:timeout => 5})
+    def initialize(options = nil)
+      if options == nil
+        options = {
+          :timeout        => 5,
+          :display_infos  => true,
+          :display_errors => true
+        }
+      end
       @rest_adapter = RestClientAdapter.new(options)
     end
 
