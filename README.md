@@ -17,7 +17,7 @@ require 'cryptowatch'
 ## Requests list
 Let's construct or first request with the gem:
 ```ruby
-cw = Cryptowatch::Client.new({:timeout => 10}) #By default timeout = 5.
+cw = Cryptowatch::Wrapper.new({:timeout => 10}) #By default timeout = 5.
 
 cw.assets		       #Returns all assets (in no particular order).
 cw.assets(:btc)		       #Lists all markets which have this asset as a base or quote.
