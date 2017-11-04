@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Thursday, November 2nd 2017, 12:25:20 am
+# @Last modified time: Saturday, November 4th 2017, 11:52:09 pm
 require 'rest-client'
 require 'logger'
 require 'json'
@@ -42,7 +42,8 @@ module Cryptowatch
       rescue SocketError => e
         logger.error("(#{url}): #{e.message}")
       rescue RestClient::ExceptionWithResponse => e
-        logger.error("(#{url}): Error, bad arguments: #{e.message}")
+          
+        logger.error("(#{url}): #{e.message}")
       end
     end
   end

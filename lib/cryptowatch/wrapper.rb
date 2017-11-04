@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Saturday, November 4th 2017, 11:45:41 pm
+# @Last modified time: Saturday, November 4th 2017, 11:54:59 pm
 
 require 'cryptowatch'
 

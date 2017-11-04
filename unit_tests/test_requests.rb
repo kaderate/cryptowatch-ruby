@@ -15,7 +15,7 @@ class TestRequests < Test::Unit::TestCase
   attr_accessor :r
 
   def test_requests
-    r = Cryptowatch::Client.new({:timeout => 3})
+    r = Cryptowatch::Wrapper.new({:timeout => 3})
 
     r.assets                    #Returns all assets (in no particular order).
     r.assets(:btc)              #Lists all markets which have this asset as a base or quote.
