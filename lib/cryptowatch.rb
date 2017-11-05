@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Saturday, November 4th 2017, 11:54:56 pm
+# @Last modified time: Sunday, November 5th 2017, 5:25:08 pm
 
 require "rubygems"
 
@@ -11,6 +11,10 @@ require "cryptowatch/version"
 require "cryptowatch/api/api"
 require "cryptowatch/wrapper"
 require "cryptowatch/adapter/rest_client_adapter"
+require "cryptowatch/business/assets"
+require "cryptowatch/business/exchanges"
+require "cryptowatch/business/markets"
+require "cryptowatch/business/pairs"
 
 module Cryptowatch
   module Api
