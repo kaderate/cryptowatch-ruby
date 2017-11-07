@@ -3,21 +3,27 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Sunday, November 5th 2017, 5:24:13 pm
-
-require 'rubygems'
-require 'test/unit'
-require 'rest-client'
+# @Last modified time: Monday, November 6th 2017, 1:09:28 pm
 require 'cryptowatch'
 
-class TestRequests < Test::Unit::TestCase
-  attr_accessor :r
+class MyApplication
+  include Cryptowatch
 
-  def test_requests
-    wrapper = Cryptowatch::Wrapper.new;
+    wrapper   = Wrapper.new;
 
-    wrapper.get(Cryptowatch::Markets::index)
-    wrapper.get(Cryptowatch::Markets::price(:kraken, :btc))
-  end
+    wrapper.get(Assets::index)
+    wrapper.get(Assets::asset(:btc))
 
+    wrapper.get(Exchanges::index)
+    wrapper.get(Exchanges::exchange(:kraken))
+
+    wrapper.get(Markets::index)
+    wrapper.get(Markets::price(:kraken, :btcusd))
+    wrapper.get(Markets::summary(:gdax, :btceur))
+    wrapper.get(Markets::trades(:poloniex, :ethbtc))
+    wrapper.get(Markets::orderbook(:kraken, :xrpbtc))
+    wrapper.get(Markets::ohlc(:kraken, :xrpbtc))
+
+    wrapper.get(Pairs::index)
+    wrapper.get(Pairs::pair(:btcusd))
 end

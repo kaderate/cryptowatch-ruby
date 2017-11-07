@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Sunday, November 5th 2017, 12:44:20 pm
+# @Last modified time: Sunday, November 5th 2017, 6:42:01 pm
 
 module Cryptowatch
   module Api
@@ -11,7 +11,8 @@ module Cryptowatch
     API_BASE_URL      = "https://api.cryptowat.ch"
 
     def self.format_url(*args)
-      return (args[1] == nil) ? (args.join '') : (args.join'/')
+      args -= [nil]
+      return args.join'/'
     end
 
   end

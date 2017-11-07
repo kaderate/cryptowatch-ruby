@@ -1,0 +1,19 @@
+
+# Logfile created on 2017-11-05 17:56:05 +0100 by logger.rb/56438
+E, [2017-11-05T17:59:18.694354 #4796] ERROR -- : Unknow route input.
+E, [2017-11-05T18:01:34.433434 #4842] ERROR -- : Unknow route input.
+E, [2017-11-05T18:01:34.487209 #4842] ERROR -- : (true): Failed to open TCP connection to true:80 (getaddrinfo: nodename nor servname provided, or not known)
+I, [2017-11-05T18:05:50.551578 #4945]  INFO -- : GET => https://api.cryptowat.ch/markets
+E, [2017-11-05T18:05:50.551680 #4945] ERROR -- : Unknow route input.
+E, [2017-11-05T18:05:50.553169 #4945] ERROR -- : (true): Failed to open TCP connection to true:80 (getaddrinfo: nodename nor servname provided, or not known)
+I, [2017-11-05T18:06:08.205394 #4960]  INFO -- : GET => https://api.cryptowat.ch/markets
+E, [2017-11-05T18:06:08.205524 #4960] ERROR -- : Unknow route input.
+E, [2017-11-05T18:06:08.207055 #4960] ERROR -- : (true): Failed to open TCP connection to true:80 (getaddrinfo: nodename nor servname provided, or not known)
+I, [2017-11-05T18:16:07.842420 #5061]  INFO -- : GET => https://api.cryptowat.ch/markets
+I, [2017-11-05T18:16:07.843477 #5061]  INFO -- : GET => https://api.cryptowat.ch/markets
+E, [2017-11-05T18:16:07.843559 #5061] ERROR -- : Unknow route input.
+E, [2017-11-05T18:16:07.845376 #5061] ERROR -- : (true): Failed to open TCP connection to true:80 (getaddrinfo: nodename nor servname provided, or not known)
+I, [2017-11-05T18:25:57.970403 #5207]  INFO -- : GET => https://api.cryptowat.ch/markets
+I, [2017-11-05T18:26:17.992876 #5217]  INFO -- : GET => https://api.cryptowat.ch/markets
+I, [2017-11-05T18:27:08.789213 #5266]  INFO -- : GET => https://api.cryptowat.ch/markets
+I, [2017-11-05T18:27:33.859657 #5288]  INFO -- : GET => https://api.cryptowat.ch/markets

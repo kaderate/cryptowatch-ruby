@@ -7,7 +7,7 @@
 
 module Cryptowatch
   module Api
-    VERSION = [0, 0, 3]
+    VERSION = [0, 0, 2]
     VERSION_FORMAT = VERSION.join('.')
   end
 end

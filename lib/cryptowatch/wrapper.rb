@@ -3,7 +3,7 @@
 # @Email:  gonzal_e@etna-alternance.net
 # @Project: RubyCryptowatch
 # @Last modified by:   esteban
-# @Last modified time: Sunday, November 5th 2017, 5:23:30 pm
+# @Last modified time: Monday, November 6th 2017, 1:07:49 pm
 
 require 'cryptowatch'
 
@@ -15,16 +15,16 @@ module Cryptowatch
     def initialize(options = nil)
       if options == nil
         options = {
-          :timeout        => 5,
-          :display_infos  => true,
-          :display_errors => true
+          :timeout            => 5,
+          :display_infos      => true,
+          :display_errors     => true
         }
       end
       @rest_adapter = RestClientAdapter.new(options)
     end
 
     def get(url)
-      puts url
+      return @rest_adapter.get(url)
     end
 
   end
