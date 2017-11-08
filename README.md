@@ -14,22 +14,31 @@ Require the gem into your project with:
 ```
 require 'cryptowatch'
 ```
-## Requests list
-Let's construct or first request with the gem:
+## An example
 ```ruby
-cw = Cryptowatch::Wrapper.new({:timeout => 10}) #By default timeout = 5.
+require 'cryptowatch'
 
-cw.assets		       #Returns all assets (in no particular order).
-cw.assets(:btc)		       #Lists all markets which have this asset as a base or quote.
+class MyApplication
+  include Cryptowatch
 
-cw.pairs		       #Returns all pairs (in no particular order).
-cw.pairs(:btcusd)	       #Returns a single pair. Lists all markets for this pair.
+    wrapper   = Wrapper.new;
 
-cw.exchanges		       #Returns a list of all supported exchanges.
-cw.exchanges(:kraken)	       #Returns a single exchange, with associated routes.
+    wrapper.get(Assets::index)
+    wrapper.get(Assets::asset(:btc))
 
-cw.markets		       #Returns a list of all supported markets.
-cw.markets(:kraken, :btcusd)   #Returns a single market, with associated routes.
+    wrapper.get(Exchanges::index)
+    wrapper.get(Exchanges::exchange(:kraken))
+
+    wrapper.get(Markets::index)
+    wrapper.get(Markets::price(:kraken, :btcusd))
+    wrapper.get(Markets::summary(:gdax, :btceur))
+    wrapper.get(Markets::trades(:poloniex, :ethbtc))
+    wrapper.get(Markets::orderbook(:kraken, :xrpbtc))
+    wrapper.get(Markets::ohlc(:kraken, :xrpbtc))
+
+    wrapper.get(Pairs::index)
+    wrapper.get(Pairs::pair(:btcusd))
+end
 
 #In writing...
 ```
