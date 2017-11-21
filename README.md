@@ -1,4 +1,4 @@
-# Cryptowatch Library for Ruby
+# Cryptowatch Wrapper in Ruby
 
 Developpement of *a simple interface in Ruby for Cryptowatch.*
 
