@@ -26,5 +26,5 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|gem|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_development_dependency "rest-client", '~> 0'
+  gem.add_development_dependency "rest-client", '~> 1.7.3'
 end
