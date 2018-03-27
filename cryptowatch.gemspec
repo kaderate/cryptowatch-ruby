@@ -20,5 +20,12 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|gem|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_development_dependency "rest-client", '~> 1.7.3'
+  gem.add_development_dependency "bundler", "~> 1"
+  gem.add_development_dependency "rest-client", '~> 2.0'
+  gem.add_development_dependency "rspec", '~> 3.7.0'
+  gem.add_development_dependency "faker", '~> 1.8.7'
+  gem.add_development_dependency "vcr", "~> 3.0"
+  gem.add_development_dependency "rake", "~> 10.0"
+  gem.add_development_dependency "webmock"
+  gem.add_development_dependency "byebug"
 end

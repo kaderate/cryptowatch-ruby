@@ -2,7 +2,7 @@
 
 A simple API wrapper for Cryptowatch written in Ruby.
 
-Cryptowat.ch documentation: API: https://cryptowat.ch/docs/
+Cryptowat.ch API documentation: https://cryptowat.ch/docs/
 
 ## Get started
 
