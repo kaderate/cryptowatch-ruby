@@ -22,10 +22,10 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency "bundler", "~> 1"
   gem.add_development_dependency "rest-client", '~> 2.0'
-  gem.add_development_dependency "rspec", '~> 3.7.0'
-  gem.add_development_dependency "faker", '~> 1.8.7'
+  gem.add_development_dependency "rspec", '~> 3.7', '>= 3.7.0'
+  gem.add_development_dependency "faker", '~> 1.8', '>= 1.8.7'
   gem.add_development_dependency "vcr", "~> 3.0"
   gem.add_development_dependency "rake", "~> 10.0"
-  gem.add_development_dependency "webmock"
-  gem.add_development_dependency "byebug"
+  gem.add_development_dependency "webmock", '~> 0'
+  gem.add_development_dependency "byebug", '~> 0'
 end
