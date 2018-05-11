@@ -10,8 +10,8 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Abdelkader K"]
   gem.summary       = 'Cryptowat.ch API wrapper written in Ruby.'
   gem.description	  = 'A simple API wrapper in Ruby to facilite the use of Cryptowat.ch'
-  gem.email         = 'noone@github.com'
-  gem.homepage		  = 'https://github.com/akettal/Cryptowatch'
+  gem.email         = 'akettal@users.noreply.github.com'
+  gem.homepage		  = 'https://github.com/akettal/cryptowatch-ruby'
   gem.require_paths = ['lib/cryptowatch']
   gem.licenses      = ['MIT']
 
